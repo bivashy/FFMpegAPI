@@ -84,9 +84,8 @@ public class YoutubeSoundFormat implements ISoundFormat {
                 return null;
             }
             VideoInfo videoInfo = response.data();
-            Format bestAudioFormat = videoInfo.bestAudioFormat() == null ? videoInfo.bestVideoWithAudioFormat() : videoInfo.bestAudioFormat();
+            Format bestAudioFormat = videoInfo.bestAudioFormat() == null ? optimalVideoWithAudioFormat(videoInfo) : videoInfo.bestAudioFormat();
             try {
-                System.o
                 URL audioUrl = new URL(bestAudioFormat.url());
                 InputStream audioStream = new BufferedInputStream(audioUrl.openStream());
                 if (bestAudioFormat.extension().isAudio())
@@ -121,8 +120,10 @@ public class YoutubeSoundFormat implements ISoundFormat {
             if (!(format instanceof VideoWithAudioFormat))
                 continue;
             VideoWithAudioFormat videoWithAudioFormat = (VideoWithAudioFormat) format;
-            if(videoWithAudioFormat.audioQuality().compare())
+            if (best == null || videoWithAudioFormat.audioQuality().compare(best.audioQuality()) > 0)
+                best = videoWithAudioFormat;
         }
+        return best;
     }
 
     private static String getVideoId(URL url) {
