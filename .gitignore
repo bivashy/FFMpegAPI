@@ -1,6 +1,14 @@
 # Compiled class file
 *.class
 
+# Maven target folder
+/target
+
+#IntellijIDEA generated files
+*.eml
+*.iml
+/.idea
+
 # Log file
 *.log
 
