@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.ubivashka.audio</groupId>
+    <artifactId>FFMpegAPI</artifactId>
+    <version>1.0.0</version>
+
+    <properties>
+        <!-- Manifest -->
+        <manifest.contact>https://vk.me/bbaty45/</manifest.contact>
+        <manifest.developer>Ubivashka</manifest.developer>
+        <manifest.version>${project.version}</manifest.version>
+
+        <!-- Building -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version>8</java.version>
+        <project.mainclass>com.ubivashka.audio.FFMpegAPI</project.mainclass>
+
+        <!-- Dependencies -->
+        <spigot.api.version>1.19-R0.1-SNAPSHOT</spigot.api.version>
+        <configuration.library.version>3.0.5</configuration.library.version>
+        <ffsampledsp.version>0.9.46</ffsampledsp.version>
+        <youtube.downloader.version>3.1.0</youtube.downloader.version>
+        <plasmo.voice.addon.version>1.2.1</plasmo.voice.addon.version>
+
+        <!-- Maven plugins -->
+        <maven.compiler.plugin.version>3.8.1</maven.compiler.plugin.version>
+        <maven.source.plugin.version>3.2.0</maven.source.plugin.version>
+    </properties>
+
+    <repositories>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
+
+        <repository>
+            <id>spigot-repo</id>
+            <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/
+            </url>
+        </repository>
+    </repositories>
+
+    <dependencies>
+        <!-- Spigot API -->
+        <dependency>
+            <groupId>org.spigotmc</groupId>
+            <artifactId>spigot-api</artifactId>
+            <version>${spigot.api.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- Configuration Library -->
+        <dependency>
+            <groupId>com.github.U61vashka.ConfigurationLibrary</groupId>
+            <artifactId>bukkit</artifactId>
+            <version>${configuration.library.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.U61vashka.ConfigurationLibrary</groupId>
+            <artifactId>core</artifactId>
+            <version>${configuration.library.version}</version>
+        </dependency>
+
+        <!-- PlasmoVoiceAddon -->
+        <dependency>
+            <groupId>com.github.U61vashka</groupId>
+            <artifactId>PlasmoVoiceAddon</artifactId>
+            <version>${plasmo.voice.addon.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- FFSampledSP -->
+        <dependency>
+            <groupId>com.tagtraum</groupId>
+            <artifactId>ffsampledsp-complete</artifactId>
+            <version>${ffsampledsp.version}</version>
+        </dependency>
+
+        <!-- Java youtube downloader -->
+        <dependency>
+            <groupId>com.github.sealedtx</groupId>
+            <artifactId>java-youtube-downloader</artifactId>
+            <version>${youtube.downloader.version}</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>${project.name}</finalName>
+        <plugins>
+            <!-- Maven compiler plugin -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven.compiler.plugin.version}</version>
+                <configuration>
+                    <compilerArgs>
+                        <arg>-Xlint:deprecation</arg>
+                        <arg>-Xlint:unchecked</arg>
+                    </compilerArgs>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
+            <!-- Maven assembly plugin -->
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>${project.mainclass}</mainClass>
+                        </manifest>
+                    </archive>
+                    <descriptorRefs>
+                        <descriptorRef>jar-with-dependencies</descriptorRef>
+                    </descriptorRefs>
+
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>make-assembly</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>
