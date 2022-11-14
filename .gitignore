@@ -4,7 +4,7 @@
 # Maven target folder
 /target
 
-#IntellijIDEA generated files
+# IntellijIDEA generated files
 *.eml
 *.iml
 /.idea
