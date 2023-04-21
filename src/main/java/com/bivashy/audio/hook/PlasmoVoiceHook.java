@@ -1,13 +1,13 @@
-package com.ubivashka.audio.hook;
+package com.bivashy.audio.hook;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import com.bivashy.audio.FFMpegAPI;
+import com.bivashy.audio.hook.plasmovoice.FFmpegSoundFormat;
+import com.bivashy.audio.hook.plasmovoice.YoutubeSoundFormat;
 import com.tagtraum.ffsampledsp.FFNativeLibraryLoader;
 import com.tagtraum.ffsampledsp.FFNativePeerInputStream;
-import com.ubivashka.audio.FFMpegAPI;
-import com.ubivashka.audio.hook.plasmovoice.FFmpegSoundFormat;
-import com.ubivashka.audio.hook.plasmovoice.YoutubeSoundFormat;
 import com.ubivashka.plasmovoice.PlasmoVoiceAddon;
 
 public class PlasmoVoiceHook {

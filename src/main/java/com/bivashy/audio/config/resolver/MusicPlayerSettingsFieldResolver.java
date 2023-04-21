@@ -1,4 +1,4 @@
-package com.ubivashka.audio.config.resolver;
+package com.bivashy.audio.config.resolver;
 
 import com.ubivashka.configuration.context.ConfigurationFieldResolverContext;
 import com.ubivashka.configuration.holder.ConfigurationSectionHolder;

@@ -1,4 +1,4 @@
-package com.ubivashka.audio.hook.plasmovoice;
+package com.bivashy.audio.hook.plasmovoice;
 
 import java.io.BufferedInputStream;
 import java.io.File;
@@ -11,7 +11,7 @@ import javax.sound.sampled.UnsupportedAudioFileException;
 
 import com.tagtraum.ffsampledsp.FFAudioFileReader;
 import com.tagtraum.ffsampledsp.FFFormatConversionProvider;
-import com.ubivashka.audio.FFMpegAPI;
+import com.bivashy.audio.FFMpegAPI;
 import com.ubivashka.plasmovoice.config.settings.MusicPlayerSettings;
 import com.ubivashka.plasmovoice.sound.AbstractSoundFactory;
 import com.ubivashka.plasmovoice.sound.ISound;

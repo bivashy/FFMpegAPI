@@ -17,7 +17,7 @@
         <!-- Building -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>8</java.version>
-        <project.mainclass>com.ubivashka.audio.FFMpegAPI</project.mainclass>
+        <project.mainclass>com.bivashy.audio.FFMpegAPI</project.mainclass>
 
         <!-- Dependencies -->
         <spigot.api.version>1.19-R0.1-SNAPSHOT</spigot.api.version>

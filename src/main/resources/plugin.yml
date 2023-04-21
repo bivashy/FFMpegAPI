@@ -1,5 +1,5 @@
 name: FFMpegAPI
-main: com.ubivashka.audio.FFMpegAPI
+main: com.bivashy.audio.FFMpegAPI
 version: 1.0.0
 api-version: 1.13
 softdepend: [PlasmoVoiceAddon]

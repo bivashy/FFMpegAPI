@@ -1,12 +1,12 @@
-package com.ubivashka.audio;
+package com.bivashy.audio;
 
 import java.util.logging.Level;
 
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import com.ubivashka.audio.config.PluginConfig;
-import com.ubivashka.audio.hook.PlasmoVoiceHook;
+import com.bivashy.audio.config.PluginConfig;
+import com.bivashy.audio.hook.PlasmoVoiceHook;
 
 public class FFMpegAPI extends JavaPlugin {
     public static final String PLASMO_VOICE_NAME = "PlasmoVoiceAddon";

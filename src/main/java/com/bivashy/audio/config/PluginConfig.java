@@ -1,9 +1,9 @@
-package com.ubivashka.audio.config;
+package com.bivashy.audio.config;
 
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.plugin.Plugin;
 
-import com.ubivashka.audio.config.resolver.MusicPlayerSettingsFieldResolver;
+import com.bivashy.audio.config.resolver.MusicPlayerSettingsFieldResolver;
 import com.ubivashka.configuration.BukkitConfigurationProcessor;
 import com.ubivashka.configuration.ConfigurationProcessor;
 import com.ubivashka.configuration.annotation.ConfigField;
